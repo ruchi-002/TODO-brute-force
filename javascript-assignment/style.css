@@ -1,0 +1,221 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pacifico&family=Roboto+Condensed&display=swap');
+
+/* universal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* body */
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #6b5b95; */
+    /* background-color: #36486b; */
+    background-color: #f7cac9;
+    color: #3e4444;
+    min-height: 100vh;
+}
+
+/* header */
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* h1 */
+header h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+    color: #191A19;
+    margin-bottom: 1rem;
+}
+
+/* form */
+#todo-form{
+  display: flex;
+}
+
+/* input */
+input{
+    appearance: none;
+    border: none;
+    outline: none;
+   /* align-items: center; */
+    background: none;
+}
+
+/* add todo style */
+#new-input{
+    flex: 1 1 0%;
+    background-color: #DDDDDD;
+    padding:1rem ;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* placeholder */
+#new-input::placeholder{
+    color: #101010; 
+    font-size: 1.25rem;
+     /* background-image: linear-gradient(to right,purple,#051937);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+/* hover on input */
+#new-input:hover{
+    background-color:#D2FAFB;
+    color:#DDDDDD ;
+}
+/* button of add todo */
+#btn-add{
+    color: #BF1363;
+    background-color:#DDDDDD ;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    padding: 1rem;  
+    cursor: pointer;
+    transition: 0.4sec;
+}
+
+/* hover on button */
+#btn-add:hover{
+    background-color: #BF1363;
+    color:#DDDDDD ;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* active on button */
+#btn-add:active{
+    background: none;
+    appearance: none;
+    border: none;
+    background-image: linear-gradient(to right,pink,purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.6;
+}
+/* main style */
+main{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto; 
+   
+}
+/* section */
+.todo-list{
+    padding: 1rem;
+}
+/* h2 style */
+.todo-list h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #191A19;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    text-align: center;
+}   
+/* outer div */
+#tasks .task{
+  display: flex;
+  justify-content: space-between;
+  background-color: #DDDDDD ;
+  padding: 1rem;
+  border: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+/* input hover */
+#tasks .task:hover{
+    background-color:#D2FAFB;
+}
+/* text of input */
+#tasks .task .content .text{
+color: #101010; 
+font-size:1.25rem ;
+width: 100%;
+display: block;
+transition: 0.4s;
+}
+/* input field */
+.text{
+    font-size: 1.25rem;
+}
+/* inner div */
+#tasks .task .content{
+  flex: 1 1 0%;
+}
+/* read only */
+#tasks .task .content .text:not(:read-only){
+    color: pink;
+}
+/* div */
+#tasks .task .actions{
+    display: flex; 
+     margin: 0 -0.5rem;
+}
+/* button */
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.4s;
+    border: none;
+    background:none;
+    color: #d0186e;
+}
+/* hover button */
+.task .actions button:hover{
+    color: black;
+}
+/* active button */
+
+.task .actions button:active{
+    background: none;
+    appearance: none;
+    border: none;
+    background-image: linear-gradient(to right,pink,purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.6;
+}
+.btn-clear {
+    padding: 15px;
+    color:  #d0186e;
+    background-color: #D2FAFB;
+    border: none;
+    font-size: 1.25rem;
+    margin: 50px auto;
+    display: block;
+    border-radius: 5px;
+}
+.btn-clear:hover{
+    background-color: #d0186e;
+    color: #fff;
+    opacity: 0.6;
+}
+.btn-clear:active{
+    appearance: none;
+    background: none;
+    border: none;
+   color: black;
+   opacity: 0.4;
+}
